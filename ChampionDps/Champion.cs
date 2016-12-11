@@ -6,26 +6,17 @@ using System.Threading.Tasks;
 
 namespace ChampionDps
 {
-    enum DamageType
+    class Champion : Unit
     {
-        Physical,
-        Magic,
-        True
-    }
-
-    class Champion
-    {
-        public Champion()
+        public Champion() : base()
         {
-            stats = new Stat[Enum.GetNames(typeof(StatType)).Length];
-            stats[(int)StatType.AP] = new Stat(100, 0);
             Spell a = new Spell();
         }
 
-        public Champion(List<Spell> newSpells, Stat[] newStats)
+        public Champion(List<Spell> newSpells, Stat[] newStats) : base(newStats)
         {
             spells = newSpells;
-            stats = newStats;
+            baseStats = newStats;
         }
 
         internal List<Spell> Spells
@@ -36,29 +27,6 @@ namespace ChampionDps
             }
         }
 
-        internal static Stat[] Stats
-        {
-            get
-            {
-                return stats;
-            }
-        }
-
-        public static int Level
-        {
-            get
-            {
-                return level;
-            }
-
-            set
-            {
-                level = value;
-            }
-        }
-
         private List<Spell> spells;
-        private static Stat[] stats;
-        private static int level; 
     }
 }

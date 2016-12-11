@@ -11,11 +11,8 @@ namespace ChampionDps
     {
         public Spell()
         {
-            double c = Champion.Stats[(int)StatType.AP].Item1;
-            int a = 0;
-            int b = a;
         }
-        public static int Level
+        public int Level
         {
             get
             {
@@ -40,7 +37,7 @@ namespace ChampionDps
         {
             get
             {
-                return cooldown*(1-Champion.Stats[(int) StatType.CDR].Item2);
+                return cooldown*(1-Champion.GetStat(StatType.CDR));
             }
 
             set
@@ -49,16 +46,28 @@ namespace ChampionDps
             }
         }
 
-        public static int IncrementLevel()
+        public int MaxCharges
+        {
+            get
+            {
+                return maxCharges;
+            }
+
+            set
+            {
+                maxCharges = value;
+            }
+        }
+
+        public int IncrementLevel()
         {
             level++;
             return level;
         }
 
+        private int maxCharges;
         private List<Damage> damages;
         private double cooldown;
-        private static int level;
-
-        
+        private int level;
     }
 }
