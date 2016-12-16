@@ -18,7 +18,7 @@ namespace ChampionDps
         {
             get
             {
-                return baseDamage + damagePerLevel*Level;
+                return baseDamage + damagePerLevel*Spell.Level;
             }
 
             set
@@ -31,7 +31,7 @@ namespace ChampionDps
         {
             get
             {
-                return scaling + scalingPerLevel*Level;
+                return scaling + scalingPerLevel*Spell.Level;
             }
 
             set

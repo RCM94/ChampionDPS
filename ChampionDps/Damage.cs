@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace ChampionDps
 {
+    enum DamageType
+    {
+        Physical,
+        Magic,
+        True
+    }
+
     class Damage
     {
         public Damage(DamageType dmgType)

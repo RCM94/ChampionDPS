@@ -18,7 +18,7 @@ namespace ChampionDps
         {
             get
             {
-                return basePercent + percentPerLevel*Level;
+                return basePercent + percentPerLevel*Spell.Level;
             }
 
             set
@@ -31,7 +31,7 @@ namespace ChampionDps
         {
             get
             {
-                return scaling + scalingPerLevel*Level;
+                return scaling + scalingPerLevel*Spell.Level;
             }
 
             set

@@ -9,10 +9,9 @@ namespace ChampionDps
 {
     class Spell
     {
-        public Spell()
-        {
-        }
-        public int Level
+        public Spell()  {}
+
+        public static int Level
         {
             get
             {
@@ -68,6 +67,6 @@ namespace ChampionDps
         private int maxCharges;
         private List<Damage> damages;
         private double cooldown;
-        private int level;
+        private static int level = 1;
     }
 }
