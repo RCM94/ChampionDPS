@@ -48,8 +48,60 @@
       <Entity type="Class">
         <Name>Damage</Name>
         <Access>Public</Access>
-        <Location left="306" top="600" />
-        <Size width="163" height="77" />
+        <Location left="306" top="789" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private DamageType type</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FlatDamage</Name>
+        <Access>Public</Access>
+        <Location left="429" top="962" />
+        <Size width="163" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private double baseDamage</Member>
+        <Member type="Field">private double damagePerLevel</Member>
+        <Member type="Field">private double scaling</Member>
+        <Member type="Field">private double scalingPerLevel</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PercentDamage</Name>
+        <Access>Public</Access>
+        <Location left="201" top="962" />
+        <Size width="163" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private double scalingPerLevel</Member>
+        <Member type="Field">private double scaling</Member>
+        <Member type="Field">private double percentPerLevel</Member>
+        <Member type="Field">private double basePercent</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>DamageType</Name>
+        <Access>Public</Access>
+        <Location left="53" top="789" />
+        <Size width="163" height="112" />
+        <Collapsed>False</Collapsed>
+        <Value>Physical</Value>
+        <Value>Magic</Value>
+        <Value>True</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>Item</Name>
+        <Access>Public</Access>
+        <Location left="306" top="204" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int newField</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Passive</Name>
+        <Access>Public</Access>
+        <Location left="100" top="474" />
+        <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
       </Entity>
@@ -64,6 +116,28 @@
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
       <Relationship type="Association" first="0" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="4" second="7">
         <Label>
         </Label>
         <StartOrientation>Horizontal</StartOrientation>

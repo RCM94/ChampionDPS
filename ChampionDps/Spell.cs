@@ -45,28 +45,15 @@ namespace ChampionDps
             }
         }
 
-        public int MaxCharges
-        {
-            get
-            {
-                return maxCharges;
-            }
-
-            set
-            {
-                maxCharges = value;
-            }
-        }
-
         public int IncrementLevel()
         {
             level++;
             return level;
         }
 
-        private int maxCharges;
-        private List<Damage> damages;
-        private double cooldown;
-        private static int level = 1;
+        
+        protected List<Damage> damages;
+        protected double cooldown;
+        protected static int level = 1;
     }
 }

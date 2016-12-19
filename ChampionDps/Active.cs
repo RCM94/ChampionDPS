@@ -6,23 +6,21 @@ using System.Threading.Tasks;
 
 namespace ChampionDps
 {
-    class Item
+    class Active : Spell
     {
-        internal List<Spell> Spells
+        public int MaxCharges
         {
             get
             {
-                return spells;
+                return maxCharges;
             }
 
             set
             {
-                spells = value;
+                maxCharges = value;
             }
         }
 
-
-        private List<Stat> stats;
-        private List<Spell> spells;
+        private int maxCharges;
     }
 }

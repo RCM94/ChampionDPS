@@ -6,23 +6,21 @@ using System.Threading.Tasks;
 
 namespace ChampionDps
 {
-    class Item
+    class Passive : Spell
     {
-        internal List<Spell> Spells
+        public string Condition
         {
             get
             {
-                return spells;
+                return condition;
             }
 
             set
             {
-                spells = value;
+                condition = value;
             }
         }
 
-
-        private List<Stat> stats;
-        private List<Spell> spells;
+        private String condition;
     }
 }
